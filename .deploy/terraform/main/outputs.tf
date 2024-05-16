@@ -47,12 +47,8 @@ output "app_tg_arn" {
   value = aws_lb_target_group.app_tg.arn
 }
 
-# output "https_listener_arn" {
-#   value = aws_lb_listener.https_listener.arn
-# }
-
-output "app_listener_arn" {
-  value = aws_lb_listener.app_listener.arn
+output "https_listener_arn" {
+  value = aws_lb_listener.https_listener.arn
 }
 
 output "app_sg_id" {

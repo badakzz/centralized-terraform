@@ -3,13 +3,13 @@ resource "aws_security_group" "app_sg" {
   description = "Security group for application in ECS"
   vpc_id      = aws_vpc.main.id
 
-  # ingress {
-  #   from_port   = 443
-  #   to_port     = 443
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "Allow HTTPS traffic to ECS"
-  # }
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+    description = "Allow HTTPS traffic to ECS"
+  }
 
   ingress {
     from_port   = 80
