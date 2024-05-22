@@ -27,6 +27,10 @@ output "rds_subnet_b_id" {
   value = aws_subnet.rds_subnet_b.id
 }
 
+output "lb_logs_bucket" {
+  value = aws_s3_bucket.lb_logs.bucket
+
+}
 output "lb_logs_bucket_arn" {
   value = aws_s3_bucket.lb_logs.arn
 }
