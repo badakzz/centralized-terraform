@@ -58,3 +58,15 @@ output "https_listener_arn" {
 output "app_sg_id" {
   value = aws_security_group.app_sg.id
 }
+
+output "lb_logs_name" {
+  value = aws_cloudwatch_log_group.lb_logs.name
+}
+
+output "ecs_sg_id" {
+  value = aws_security_group.ecs_sg.id
+}
+
+output "rds_sg_id" {
+  value = aws_security_group.rds_sg.id
+}
