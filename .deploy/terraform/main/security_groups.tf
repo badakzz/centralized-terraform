@@ -8,6 +8,23 @@ resource "aws_security_group" "ecs_sg" {
     to_port         = 3000
     protocol        = "tcp"
     security_groups = [aws_security_group.app_sg.id]
+    description     = "Wow app application access"
+  }
+
+  ingress {
+    from_port       = 3001
+    to_port         = 3001
+    protocol        = "tcp"
+    security_groups = [aws_security_group.app_sg.id]
+    description     = "Blind test client application access"
+  }
+
+  ingress {
+    from_port       = 3002
+    to_port         = 3002
+    protocol        = "tcp"
+    security_groups = [aws_security_group.app_sg.id]
+    description     = "Blind test backend application access"
   }
 
   egress {

@@ -47,8 +47,16 @@ output "ecs_subnet_id" {
   value = aws_subnet.ecs_subnet.id
 }
 
-output "app_tg_arn" {
-  value = aws_lb_target_group.app_tg.arn
+output "wowapp_tg_arn" {
+  value = aws_lb_target_group.wowapp_tg.arn
+}
+
+output "blindtest_client_tg_arn" {
+  value = aws_lb_target_group.blindtest_client_tg.arn
+}
+
+output "blindtest_backend_tg_arn" {
+  value = aws_lb_target_group.blindtest_backend_tg.arn
 }
 
 output "https_listener_arn" {
@@ -69,4 +77,8 @@ output "ecs_sg_id" {
 
 output "rds_sg_id" {
   value = aws_security_group.rds_sg.id
+}
+
+output "kms_key_db_id" {
+  value = aws_kms_key.kms-key-db.id
 }
